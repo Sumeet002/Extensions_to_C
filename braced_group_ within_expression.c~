@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+
+	int x = ({int z,y; 
+		  for(z=0;z<5;z++){
+			y=y+z*2;
+	       	  }
+		  y;
+		});
+
+	printf("value of x is : %d\n",x);
+
+	return 0;
+}
