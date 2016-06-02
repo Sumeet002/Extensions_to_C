@@ -9,11 +9,14 @@ int rect(int height,int width,int option){
 
 	int calc_perimeter(int height,int width){
 		return 2*(height+width);
+		
 	}
 
 	int calc_diagonal(int height,int width){
 		return sqrt(((height*height) + (width*width)));
 	}
+	
+	int i;
 
 	switch(option){
 
@@ -21,14 +24,15 @@ int rect(int height,int width,int option){
 			calc_area(height,width);
 			break;
 		case 1:
-			calc_perimeter(height,width);
-			break;
+		        i=calc_perimeter(height,width);
+			return i;
+			
 		case 2:
 			calc_diagonal(height,width);
 			break;
 
 		default:
-			printf("Invalid option")
+			printf("Invalid option");
 			break;
 
 	}
